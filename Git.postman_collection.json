@@ -1,0 +1,21 @@
+{
+	"info": {
+		"_postman_id": "765d14a9-1119-4b26-9972-e93cdba7d0be",
+		"name": "Git",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
