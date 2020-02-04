@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "84a466bc-fa2b-4f5d-86a5-c3d7ecbc6702",
+		"name": "pet",
+		"description": "https://petstore.swagger.io/#/pet/findPetsByStatus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "find by id",
+			"item": [
+				{
+					"name": "/pet/{petId}-404 Not Found",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/0",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pet/{petId}-404 Not Found BUG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/dss",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"dss"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pet/{petId}-200 OK",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/9216678377732766219",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"9216678377732766219"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "find by status",
+			"item": [
+				{
+					"name": "/pet/findByStatus-200 OK",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://petstore.swagger.io/v2/pet/findByStatus/?status=sold",
+							"protocol": "http",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"findByStatus",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "sold"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pet/findByStatus-200 OK incorrect status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://petstore.swagger.io/v2/pet/findByStatus/?status=abc",
+							"protocol": "http",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"findByStatus",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "abc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pet/findByStatus-200 OK incorrect status BUG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://petstore.swagger.io/v2/pet/findByStatus/?status=1212saads",
+							"protocol": "http",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"findByStatus",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "1212saads"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4f9005a8-1fa2-4deb-a417-ed36337ecef5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "d8263c68-ab14-4285-bcf8-44e0d1885351",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "update pet",
+			"item": [
+				{
+					"name": "update pet-success",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "hi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/9216678377732766219",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"9216678377732766219"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "hi",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "sold",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "46d04d98-68c2-48c3-a7cc-7847519c64e1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8438cd12-60af-423a-a9cc-d82b29521e83",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
